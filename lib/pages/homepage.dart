@@ -23,8 +23,7 @@ class HomePage extends StatelessWidget {
             icon: Icon(Icons.add),
             label: Text("New Meeting"),
             style: ElevatedButton.styleFrom(
-              fixedSize: Size(350, 30),
-              primary: Colors.indigo,
+              fixedSize: Size(350, 30), backgroundColor: Colors.indigo,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25)),
             ),
@@ -45,8 +44,7 @@ class HomePage extends StatelessWidget {
             icon: Icon(Icons.margin),
             label: Text("Join with a code"),
             style: OutlinedButton.styleFrom(
-              primary: Colors.indigo,
-              side: BorderSide(color: Colors.indigo),
+              foregroundColor: Colors.indigo, side: BorderSide(color: Colors.indigo),
               fixedSize: Size(350, 30),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25)),
@@ -60,4 +58,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-}
+
