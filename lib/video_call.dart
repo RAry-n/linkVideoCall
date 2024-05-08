@@ -23,17 +23,17 @@ class _VideoCallState extends State<VideoCall> {
   }
 
   Future<void> getToken() async {
-    String link =
-        "https://agora-node-tokenserver-1.davidcaleb.repl.co/access_token?channelName=${widget.channelName}";
+    String link ="https://connexustoken-e962cf99bf69.herokuapp.com/rtc/${widget.channelName}/publisher/uid/565/?expiry=3600";
+        //"https://agora-node-tokenserver-1.davidcaleb.repl.co/access_token?channelName=${widget.channelName}";
 
     Response _response = await get(Uri.parse(link));
     Map data = jsonDecode(_response.body);
     setState(() {
-      tempToken = data["token"];
+      tempToken = data["rtcToken"];
     });
     _client = AgoraClient(
         agoraConnectionData: AgoraConnectionData(
-          appId: "843077704d2f4d19a7ed336afaa0c2ca",
+          appId: "cfece32da59341699bfd790bced4249f",
           tempToken: tempToken,
           channelName: widget.channelName,
         ),
