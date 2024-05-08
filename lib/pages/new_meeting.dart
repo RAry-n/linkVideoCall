@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart'; // Updated import
 import 'package:uuid/uuid.dart';
 import 'package:video_conference/video_call.dart';
 
@@ -69,8 +69,7 @@ class _NewMeetingState extends State<NewMeeting> {
               icon: Icon(Icons.arrow_drop_down),
               label: Text("Share invite"),
               style: ElevatedButton.styleFrom(
-                fixedSize: Size(350, 30),
-                primary: Colors.indigo,
+                fixedSize: Size(350, 30), backgroundColor: Colors.indigo,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25)),
               ),
@@ -83,8 +82,7 @@ class _NewMeetingState extends State<NewMeeting> {
               icon: Icon(Icons.video_call),
               label: Text("start call"),
               style: OutlinedButton.styleFrom(
-                primary: Colors.indigo,
-                side: BorderSide(color: Colors.indigo),
+                foregroundColor: Colors.indigo, side: BorderSide(color: Colors.indigo),
                 fixedSize: Size(350, 30),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25)),
